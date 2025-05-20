@@ -12,6 +12,8 @@ const PORT = 3000;
   /blogs/[blog-title-here] -> The page for reading/editing the blog. Here, there's an edit button to edit the text and save.
 */
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
