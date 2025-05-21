@@ -18,6 +18,10 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+app.get("/blogs", (req, res) => {
+  res.render("discover.ejs");
+});
+
 app.listen(PORT, () => {
   console.log("Listening to port " + PORT);
 });
