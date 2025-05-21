@@ -67,7 +67,9 @@
 
 .blog-info > div {
   display: flex;
+  flex-direction: row-reverse ;
   gap: 8px;
+  align-items: center;
 }
 
 .blog-info img {
@@ -87,8 +89,16 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
   #blogs-grid {
     grid-template-columns: 1fr;
   }
+
+  .blog-title {
+    font-size: 18pt;
+  }
 }
+
+/* At around 330px the title is way too big for the image space */
+/* Also the images look very small in general at around that size */
+/* TODO: Fix scaling of the discover page */

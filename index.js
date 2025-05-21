@@ -22,6 +22,10 @@ app.get("/blogs", (req, res) => {
   res.render("discover.ejs");
 });
 
+app.get("/blogs/random-blog-title", (req, res) => {
+  res.render("read-blog.ejs");
+});
+
 app.listen(PORT, () => {
   console.log("Listening to port " + PORT);
 });

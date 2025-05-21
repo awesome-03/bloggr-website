@@ -1,0 +1,76 @@
+.read-blog-container {
+  display: flex;
+  max-width: 1000px;
+  flex-direction: column; 
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.read-blog-header {
+  position: relative;
+}
+
+.read-blog-header > img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.read-blog-header-content {
+  color: white;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  box-sizing: border-box;
+}
+
+.read-blog-title {
+  font-weight: bold;
+  font-size: 30pt;
+  margin: 0;
+}
+
+.read-blog-content {
+  border-radius: 0px 0px 10px 10px;
+  border: 2px solid black;
+  border-top: none;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.read-blog-content > p {
+  padding: 10px;
+}
+
+@media (min-width: 431px) and (max-width: 800px) {
+  .read-blog-title {
+    font-size: 23pt;
+  }
+
+  .blog-info {
+    transform: scale(0.9)
+  }
+}
+
+@media (max-width: 430px) {
+  .read-blog-title {
+    font-size: 20pt;
+  }
+
+  .blog-info {
+    transform: scale(0.9)
+  }
+}
+
+/* At around 376px the info text exceeds beyond the image width */
+/* TODO: Fix scaling of the read-blog page */

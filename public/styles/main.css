@@ -240,7 +240,7 @@ p {
   display: flex;
   align-items: center;
   margin-top: 50px;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 }
 
 .features > div > div {
@@ -294,7 +294,7 @@ footer {
   height: 4px;
 }
 
-@media (min-width: 901px) and (max-width: 1450px) {
+@media (min-width: 1001px) and (max-width: 1500px) {
   .hero {
     background-image: url("../images/paper-lightbulb-middle-tall.jpg");
     background-position: center;
@@ -308,7 +308,7 @@ footer {
   }
 }
 
-@media (min-width: 431px) and (max-width: 900px) {
+@media (min-width: 431px) and (max-width: 1000px) {
   .hero {
     background-image: url("../images/paper-lightbulb-middle-tall.jpg");
     background-position: center;
@@ -317,6 +317,7 @@ footer {
 
   .hero > div {
     top: 72%;
+    transform: scale(0.9);
     /* left: calc(50% - 600px); */
   }
 
@@ -329,6 +330,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: normal;
+    margin-bottom: 50px;
     /* margin-right: 10%;
     margin-left: 10%; */
   }
@@ -337,8 +339,9 @@ footer {
     height: 250px;
     width: 80%;
     object-fit: cover;
-    padding-right: 10%;
-    padding-left: 10%;
+    /* padding-right: 10%;
+    padding-left: 10%; */
+    margin: 0;
   }
 
   .features > div {
@@ -351,6 +354,8 @@ footer {
   .features > div > div {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    width: 80%;
     margin-bottom: 40px;
   }
 
@@ -360,6 +365,14 @@ footer {
 
   .feature-image-left {
     flex-direction: column-reverse;
+  }
+
+  .feature-image-right > div > p {
+    width: 100%;
+  }
+
+  .feature-image-left > div > p {
+    width: 100%;
   }
 }
 
@@ -372,6 +385,7 @@ footer {
 
   .hero > div {
     top: 72%;
+    transform: scale(0.9);
     /* left: calc(50% - 600px); */
   }
 
@@ -383,17 +397,19 @@ footer {
   .features {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-right: 10%;
-    margin-left: 10%;
+    align-items: normal;
+    margin-bottom: 50px;
+    /* margin-right: 10%;
+    margin-left: 10%; */
   }
 
   .features img {
     height: 250px;
     width: 80%;
     object-fit: cover;
-    padding-right: 10%;
-    padding-left: 10%;
+    /* padding-right: 10%;
+    padding-left: 10%; */
+    margin: 0;
   }
 
   .features > div {
@@ -406,6 +422,8 @@ footer {
   .features > div > div {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    width: 80%;
     margin-bottom: 40px;
   }
 
@@ -417,10 +435,26 @@ footer {
     flex-direction: column-reverse;
   }
 
-  /* .header-box .big-button {
-    all: revert;
-    visibility: hidden;
-  } */
+  .feature-image-right > div > p {
+    width: 100%;
+  }
 
-  /* SOMETHING SHOULD HAPPEN HERE PROBABLY */
+  .feature-image-left > div > p {
+    width: 100%;
+  }
+
+  .header-box {
+    height: calc(2.6rem + 24px);
+  }
+
+  .header-box .big-button, #discover-tab {
+    visibility: hidden;
+  }
 }
+
+/* At 606px the right side of the h1 doesn't show up */
+/* At 436px the right part of the image doesn't work properly, and you can scroll the page to the right */
+/* Actually nvm these both happen at 606px */
+/* TODO: Fix whatever is wrong with 606px */
+
+/* TODO: Add the Discover button to top right at 430px */
