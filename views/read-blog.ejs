@@ -3,101 +3,31 @@
 <section class="blog-wrapper">
   <div class="read-blog-container">
     <div class="read-blog-header">
-      <img src="/images/6205248.jpg" alt="PLACEHOLDER IMAGE" />
+      <% if (locals.image) { %>
+        <img src=<%= image %> alt="blog image" />
+        <% } else {%>
+          <img src="/images/6205248.jpg" alt="PLACEHOLDER IMAGE" />
+        <% } %>
       <div class="read-blog-header-content">
-        <h2 class="read-blog-title">Insanely Epic Blog Title</h2>
+        <h2 class="read-blog-title"><%= title %></h2>
         <div class="blog-info">
           <div>
             <img src="/images/eye.png" alt="views icon" />
-            <p>98,365</p>
+            <p><%= views %></p>
           </div>
           <div>
-            <img src="/images/calendar.png" alt="views icon" />
-            <p>21/05/25</p>
+            <img src="/images/calendar.png" alt="calendar icon" />
+            <p><%= date %></p>
           </div>
           <div>
-            <img src="/images/draw.png" alt="views icon" />
-            <p>awesome3</p>
+            <img src="/images/draw.png" alt="pencil icon" />
+            <p><%= userName %></p>
           </div>
         </div>
       </div>
     </div>
     <div class="read-blog-content">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed velit
-        in tellus vehicula commodo. Ut vel interdum mauris. Curabitur ut ipsum
-        in ex viverra tempus eget in leo. Maecenas sed lorem eget ante volutpat
-        maximus ut sit amet leo. Integer auctor bibendum erat. Donec accumsan
-        aliquet risus, at elementum quam tempor vitae. Sed nec viverra ante.
-        Vivamus aliquet tincidunt odio, sed placerat arcu rhoncus sit amet.
-      </p>
-      <p>
-        Proin sollicitudin rutrum vehicula. Integer tellus mi, rutrum a leo vel,
-        congue pulvinar eros. Donec pretium accumsan lobortis. Nunc blandit
-        augue vel augue venenatis, in posuere odio pellentesque. Quisque eu
-        massa felis. Etiam tellus ligula, iaculis a enim sit amet, vehicula
-        tincidunt elit. Cras lacinia, orci at congue aliquam, ante orci tempor
-        lectus, a convallis arcu felis id libero.
-      </p>
-      <p>
-        In non lacus eros. Curabitur at malesuada tortor, eget rutrum libero.
-        Suspendisse suscipit ultrices nisl quis tempus. Etiam volutpat erat a
-        purus luctus mollis consectetur quis velit. Nulla pulvinar congue eros
-        non dignissim. Curabitur ullamcorper gravida neque, in convallis tellus
-        maximus at. Pellentesque luctus nisi suscipit urna elementum, in
-        bibendum lacus tempus. Vivamus bibendum ipsum ac magna pellentesque
-        lobortis. Fusce facilisis laoreet erat, sed consectetur nulla hendrerit
-        a. Suspendisse eleifend fringilla ante vehicula dapibus. Proin accumsan
-        ipsum orci, ut blandit magna porta eget. Fusce ac ipsum arcu. In non mi
-        consequat, hendrerit nibh non, tincidunt dui. Donec sit amet suscipit
-        neque. Donec euismod turpis quis sapien mollis scelerisque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla
-        rutrum sapien, sit amet facilisis est faucibus eu. Quisque ac dapibus
-        nisl. In nec erat neque. Donec imperdiet, lectus fringilla ultricies
-        imperdiet, arcu nibh sagittis nulla, at maximus nibh urna eu erat. Sed
-        suscipit augue nec nisi dictum blandit. Proin id viverra enim. Integer
-        ultricies metus et facilisis accumsan. Proin sit amet quam lacus. Duis
-        velit nisi, tincidunt id lacus vel, aliquam efficitur risus. Nulla
-        sollicitudin fringilla bibendum. Integer quis dolor eu sem commodo
-        porttitor. Quisque ac dapibus nisl. Nulla facilisi. Praesent eget ligula
-        ut dui vulputate blandit eu sed nibh. Phasellus condimentum elit vitae
-        enim iaculis vulputate.
-      </p>
-      <p>
-        Sed vitae vestibulum leo, nec ultricies nisl. Nulla sodales nisl a erat
-        convallis auctor. Etiam hendrerit lectus vel dui rhoncus, a tristique
-        felis sodales. Sed gravida, massa non mattis pellentesque, arcu leo
-        tristique ante, in hendrerit turpis velit et neque. Pellentesque odio
-        lorem, maximus eu ex ac, auctor tempor arcu. Vivamus ornare, quam ac
-        luctus tempor, metus ipsum suscipit odio, sed euismod orci lectus eu
-        magna. Sed non rhoncus dolor. Cras eget eleifend quam. Cras porttitor
-        diam et mauris interdum iaculis. Cras lobortis sed quam varius porta.
-        Curabitur sodales arcu ut ligula commodo, nec mollis eros tincidunt.
-        Curabitur at sem felis. Vivamus eget pretium mauris.
-      </p>
-      <p>
-        Maecenas vel eros elit. Maecenas lobortis nibh rutrum quam scelerisque
-        posuere. Suspendisse laoreet eu risus ac pellentesque. Ut facilisis
-        blandit lectus, ac egestas justo sodales vitae. In hac habitasse platea
-        dictumst. Praesent id risus vitae lacus placerat porttitor in id enim.
-        Praesent et ligula quam. Aenean ligula est, porta sed sem a, aliquet
-        luctus sapien. Quisque id sem fringilla lectus finibus iaculis.
-      </p>
-      <p>
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-        cubilia curae; Maecenas in eleifend tellus, at pulvinar dui. Donec ipsum
-        eros, imperdiet scelerisque ultricies nec, condimentum sit amet metus.
-        Nam quis lacus hendrerit, cursus sem nec, sollicitudin ex. Nullam quis
-        turpis ac urna tempor volutpat quis vitae orci. Morbi in risus tempor
-        leo dignissim tincidunt sit amet in eros. Aliquam in mauris vehicula,
-        consequat sem vel, bibendum nulla. Suspendisse gravida leo nec gravida
-        congue. Etiam dictum lobortis arcu a lobortis. Nullam nec ultrices orci.
-        Aenean aliquet dapibus fermentum. Donec in vestibulum velit, non
-        vulputate nisi. Donec a dolor egestas, tincidunt neque non, commodo
-        lacus. Integer varius neque ex, a faucibus eros iaculis eu.
-      </p>
+      <%= text %>
     </div>
   </div>
 </section>

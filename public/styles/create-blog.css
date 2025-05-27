@@ -1,0 +1,163 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+  object-position: center;
+  background-color: rgb(185, 169, 165);
+  border: 2px dashed rgb(163, 132, 124);
+  border-bottom: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.drop-image > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  pointer-events: none;
+}
+
+.drop-image img {
+  width: 20%;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.drop-image div > h3 {
+  margin: 0;
+}
+
+.drop-image.dragover {
+  background-color: rgb(193, 216, 194);
+  border-color: rgb(146, 199, 148);
+}
+
+.drop-label {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.drop-label input[type="file"] {
+  display: none;
+}
+
+input.read-blog-title {
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 30pt;
+  padding: 0;
+  width: 100%;
+}
+
+.read-blog-title::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#create-blog-content {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 14pt;
+  padding: 0;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.5;
+  box-sizing: border-box;
+  min-height: 100px;
+  flex-grow: 1;
+}
+
+#create-blog-content::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.create-blog-header-content {
+  color: white;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), transparent);
+  box-sizing: border-box;
+}
+
+.read-blog-content {
+  border-top: 2px solid black;
+}
+
+button.create-button {
+  all: unset;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  padding: 1.3rem;
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  display: inline-block;
+}
+
+.create-blog-align {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-blog-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.read-blog-content {
+  flex-grow: 1;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* TODO: Fix the weird bug when scrollbar shows up */

@@ -1,0 +1,74 @@
+<%- include("partials/header.ejs") %>
+
+<script>
+  // Dynamically add page-specific stylesheet
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = "/styles/create-blog.css";
+  document.head.appendChild(link);
+</script>
+
+<form
+  id="create-blog-form"
+  action="/blogs/create/submit"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <section class="create-blog-align">
+    <div class="blog-wrapper">
+      <div class="read-blog-container">
+        <div class="read-blog-header">
+          <label for="image-upload" class="drop-label">
+            <div class="drop-image">
+              <div>
+                <img src="/images/cloud-computing.png" alt="upload icon" />
+                <h3>Drop your image here</h3>
+                <input
+                  type="file"
+                  id="image-upload"
+                  name="image"
+                  accept="image/*"
+                  hidden
+                />
+              </div>
+            </div>
+          </label>
+          <div class="create-blog-header-content">
+            <input
+              type="text"
+              name="title"
+              class="read-blog-title"
+              placeholder="Enter Your Title Here"
+              required
+            />
+            <div class="blog-info">
+              <div>
+                <img src="/images/eye.png" alt="views icon" />
+                <p> <%= views %> </p>
+              </div>
+              <div>
+                <img src="/images/calendar.png" alt="calendar icon" />
+                <p> <%= date %> </p>
+              </div>
+              <div>
+                <img src="/images/draw.png" alt="author icon" />
+                <p> <%= userName %> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="read-blog-content">
+          <textarea
+            id="create-blog-content"
+            name="content"
+            placeholder="Start typing out your blog..."
+            required
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="create-button">Publish Blog</button>
+  </section>
+</form>
+
+<%- include("partials/footer.ejs") %>
