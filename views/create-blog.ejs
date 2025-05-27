@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs") %>
 
 <script>
-  // Dynamically add page-specific stylesheet
+  // Add page-specific stylesheet
   const link = document.createElement("link");
   link.rel = "stylesheet";
   link.href = "/styles/create-blog.css";
@@ -21,7 +21,7 @@
           <label for="image-upload" class="drop-label">
             <div class="drop-image">
               <div>
-                <img src="/images/cloud-computing.png" alt="upload icon" />
+                <img src="/images/upload.png" alt="upload icon" />
                 <h3>Drop your image here</h3>
                 <input
                   type="file"
@@ -43,15 +43,15 @@
             />
             <div class="blog-info">
               <div>
-                <img src="/images/eye.png" alt="views icon" />
+                <img src="/images/views.png" alt="views icon" />
                 <p> <%= views %> </p>
               </div>
               <div>
-                <img src="/images/calendar.png" alt="calendar icon" />
+                <img src="/images/date.png" alt="calendar icon" />
                 <p> <%= date %> </p>
               </div>
               <div>
-                <img src="/images/draw.png" alt="author icon" />
+                <img src="/images/author.png" alt="author icon" />
                 <p> <%= userName %> </p>
               </div>
             </div>

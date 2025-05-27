@@ -1,4 +1,4 @@
 .vscode/
 node_modules/
 public/uploads/
-public/*-TEST.html
+public/*_TEST.html

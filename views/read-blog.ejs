@@ -1,26 +1,28 @@
 <%- include("partials/header.ejs") %>
 
+<!-- FIXME: Scaling of blogs inside the grid aren't consistent. -->
+
 <section class="blog-wrapper">
   <div class="read-blog-container">
     <div class="read-blog-header">
       <% if (locals.image) { %>
         <img src=<%= image %> alt="blog image" />
         <% } else {%>
-          <img src="/images/6205248.jpg" alt="PLACEHOLDER IMAGE" />
+          <img src="/images/default-bg.jpg" alt="PLACEHOLDER IMAGE" />
         <% } %>
       <div class="read-blog-header-content">
         <h2 class="read-blog-title"><%= title %></h2>
         <div class="blog-info">
           <div>
-            <img src="/images/eye.png" alt="views icon" />
+            <img src="/images/views.png" alt="views icon" />
             <p><%= views %></p>
           </div>
           <div>
-            <img src="/images/calendar.png" alt="calendar icon" />
+            <img src="/images/date.png" alt="calendar icon" />
             <p><%= date %></p>
           </div>
           <div>
-            <img src="/images/draw.png" alt="pencil icon" />
+            <img src="/images/author.png" alt="pencil icon" />
             <p><%= userName %></p>
           </div>
         </div>

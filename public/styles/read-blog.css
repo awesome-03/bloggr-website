@@ -20,11 +20,9 @@
 }
 
 /*
-  For some reason there is a gap between the image and text box
-  I honestly think I like it maybe.. But I'm not sure
-  I found the issue and fixed it. But I think I might want to add that gap back again
-  TODO: Decide if you want a gap between image and text
+  TODO: Experiment with space between the image and text field.
 */
+
 .read-blog-header-content {
   color: white;
   position: absolute;
@@ -78,7 +76,4 @@
   }
 }
 
-/* At around 376px the info text exceeds beyond the image width */
-/* TODO: Fix scaling of the read-blog page */
-
-/* TODO: Make the footer appear at the bottom of the page if there isn't enough to fill the rest of the page */
+/* FIXME: At around 376px the info text exceeds beyond the image width */

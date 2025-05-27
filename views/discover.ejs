@@ -4,27 +4,25 @@
   <div id="blogs-grid">
     <% Object.keys(blogs).forEach(blog => { %>
       <!-- Grid Element Start -->
-      <!-- TODO: Why is this id:"random-blog-title1" here? -->
       <a
         href=<%= "/blogs/" + blogs[blog].slug %>
-        class="blog-post"
-        id="random-blog-title1" 
+        class="blog-post" 
       > 
         <div class="blog-image-wrapper">
           <% if (blogs[blog].imagePath) { %>
             <img src=<%= blogs[blog].imagePath %> alt="blog image" />
           <% } else {%>
-            <img src="/images/6205248.jpg" alt="PLACEHOLDER IMAGE" />
+            <img src="/images/default-bg.jpg" alt="PLACEHOLDER IMAGE" />
           <% } %>
           <div class="blog-overlay">
             <h2 class="blog-title"><%= blogs[blog].title %></h2>
             <div class="blog-info">
               <div>
-                <img src="/images/eye.png" alt="views icon" />
+                <img src="/images/views.png" alt="views icon" />
                 <p><%= blogs[blog].views %></p>
               </div>
               <div>
-                <img src="/images/calendar.png" alt="views icon" />
+                <img src="/images/date.png" alt="views icon" />
                 <p><%= blogs[blog].createdAt %></p>
               </div>
             </div>

@@ -62,12 +62,12 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
-  transform: scale(0.95)
+  transform: scale(0.95);
 }
 
 .blog-info > div {
   display: flex;
-  flex-direction: row-reverse ;
+  flex-direction: row-reverse;
   gap: 8px;
   align-items: center;
 }
@@ -99,6 +99,6 @@
   }
 }
 
-/* At around 330px the title is way too big for the image space */
+/* FIXME: At around 330px the title is way too big for the image space */
+
 /* Also the images look very small in general at around that size */
-/* TODO: Fix scaling of the discover page */
